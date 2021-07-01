@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/FASE 4 CAP 5/css/style_refeicoes.css">
+    <title>Health Track</title>
+  </head>
+  <body>
+    
+    <div class="container-fluid">
+        <header>
+            <h1>Histórico de Pesos</h1>
+            <h2><a href="index.html"> Sair</a></h2>
+        </header>
+
+        <div class="row" id="titulo_lista">
+            <div class="col-md-4"><h2>DATA</h2></div>
+            <div class="col-md-4"><h2>PESO (Kg)</h2></div>
+            <div class="col-md-4"><h2>AÇÕES</h2></div>       
+        </div>
+        <div class="row" id="item_linha">
+            <div class="col-md-4"><h3>70kg</h3></div>
+            <div class="col-md-4"><h3>20/04/2021</h3></div>
+            <div class="col-md-4"><h3><i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h3></div>       
+        </div>
+        <div class="row" id="item_linha">
+            <div class="col-md-4"><h3>68kg</h3></div>
+            <div class="col-md-4"><h3>30/04/2021</h3></div>
+            <div class="col-md-4"><h3><i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h3></div>       
+        </div>
+        <div class="row" id="item_linha">
+            <div class="col-md-4"><h3>65kg</h3></div>
+            <div class="col-md-4"><h3>10/05/2021</h3></div>
+            <div class="col-md-4"><h3><i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h3></div>       
+        </div>
+        <div class="row" id="item_linha">
+            <div class="col-md-4"><h3>62kg</h3></div>
+            <div class="col-md-4"><h3>20/05/2021</h3></div>
+            <div class="col-md-4"><h3 ><i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h3></div>       
+        </div>
+
+        <div class="background_pop_up" id="background_pop_up">
+
+            <div class="pop_acoes" id="pop_acoes">
+                <div class="row pop_titulo">
+                    <h2>Adicione as informações</h2>
+                </div>
+
+                <div class="row pop_info">
+                    
+                    <label for="peso" class="pop_label">Data:</label>
+                    <input type="date" name="data" id="data" class="pop_input">
+                    <label for="peso" class="pop_label">Peso:</label>
+                    <input type="number" name="peso" id="peso" class="pop_input">
+                </div>
+
+                <div class="row pop_btn">
+                    <input type="button" value="Salvar" class="btn_salvar btn" onclick="fechar_pop_up ()">
+                    <input type="button" value="Sair" class="btn_sair btn" onclick="fechar_pop_up ()">
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <button onclick="info_edit()"><h1 class="h1_btn">Adicionar Peso</h1></button>
+
+    <script>
+        function info_edit() {
+            document.getElementById("pop_acoes").style.display = "initial"
+            document.getElementById("background_pop_up").style.backgroundColor =  "rgba(0, 0, 0, .4)"
+        }
+
+        function fechar_pop_up () {
+            document.getElementById("pop_acoes").style.display = "none"
+            document.getElementById("background_pop_up").style.backgroundColor =  "rgba(0, 0, 0, 0)"
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
